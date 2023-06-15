@@ -76,6 +76,5 @@ django-tests:
 
 deploy:
   stage: deploy
-  script:
-    - python3 manage.py runserver
+  script: echo "Define your deployment script!"
   environment: production
