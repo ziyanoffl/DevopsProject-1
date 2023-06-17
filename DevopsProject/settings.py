@@ -81,6 +81,7 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = ["https://djangoprojects.azurewebsites.net", "https://djangoprojects.azurewebsites.net"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
