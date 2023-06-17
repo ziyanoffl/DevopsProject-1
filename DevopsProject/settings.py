@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@gd@tj8z-!iii=i2wy61cy7l@5ttz&-l4qx43k0x4v-5moxe64
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,6 +81,7 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = ["https://djangoprojects.azurewebsites.net", "https://djangoprojects.azurewebsites.net"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
