@@ -62,6 +62,4 @@ jobs:
 
       - name: Run tests
         run: |
-          # Add your test command here
-          # For example, if you're using pytest:
-          pytest
+          - python manage.py test tests.test_views
