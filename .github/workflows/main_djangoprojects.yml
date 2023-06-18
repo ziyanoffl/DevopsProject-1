@@ -30,8 +30,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
         
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-      
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
         with:
@@ -53,7 +51,7 @@ jobs:
         with:
           name: python-app
           path: .
-          
+
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
@@ -61,3 +59,9 @@ jobs:
           app-name: 'DjangoProjects'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C30EE9095CF3483AAE985D45F54A2D8C }}
+
+      - name: Run tests
+        run: |
+          # Add your test command here
+          # For example, if you're using pytest:
+          pytest
