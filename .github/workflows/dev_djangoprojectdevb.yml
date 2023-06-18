@@ -59,5 +59,8 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'DjangoProjectDevB'
-          slot-name: 'Development'
+          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B4BAB00B75A943F7B958100BE357EBC4 }}
+
+      - name: Run tests
+        run: |
